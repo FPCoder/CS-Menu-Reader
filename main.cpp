@@ -37,7 +37,40 @@ int main(int argc, char *argv[]) {
 		ct.readFile(argv[i]);
 	}
 	ct.print();
+	
+	/*char menu[5];
+for(int i = 0; menu[i] != '\0'; i++)
+    menu[i] = '\0';
+for(int i = 0; i <= 8; i++) {
+    menu = "file" + (i + '0');
+    ifstream myfile(menu1);
 
+//Open data files to read in data
+  ifstream myfile ("menu1.txt");
+
+  if (myfile.is_open())
+  {
+	  //read in the size of the matrix
+	  myfile>>N;
+
+	  //declare double pointer matrix
+	  int **matrix = new int*[N];
+stream myfile(menu);
+}
+	  //Allocate Memory
+	  for(int i = 0; i < N; i++){
+		  matrix[i] = new int [N];
+	  }
+	  //make sure fileis not at end and read int the contents into the array matrix
+	  while(myfile.good()){
+		  for(int i = 0; i < N; i++){
+			  for(int j = 0; j <N; j++){
+		  myfile>>matrix[i][j];
+			  }
+		  }
+	  } */
+
+	
 	//Divides prices by corresponding recurrence and prints accordingly
 	//TO-DO
 
