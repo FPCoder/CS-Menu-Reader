@@ -26,3 +26,16 @@ for each item in vector
 
 Parts subject to change, let me know if the assignment should be distributed differently
 	-Bryan
+	
+----------------------------------------------------
+Update:
+The program is now written to have all the data accessible in the "Counts" class.
+It makes the main() function look less cluttered to have a class that keeps track of all the vectors
+and since we only need a few operations, creating functions that can access the data is easier this way.
+For example, if we create a reading function for main it would look like:
+
+void readFile(string fileName, vector<double> prices, vector<string> names, vector<int> recurrences);
+
+TODO:
+print the average and clean up the print() function already in place.
+    -It currently just prints the state of the vectors, but this is not how the program should work.
