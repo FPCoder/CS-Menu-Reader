@@ -1,0 +1,28 @@
+Menu Assignment:
+
+Psuedo:
+
+Part 1:
+
+read file
+for each item and price
+	push into corresponding vectors
+
+Part 2:
+for remaining files
+	check item vector for each item on menu
+	if not on menu
+		push item and price into corresponding vectors
+	if on menu
+		add price at item name location in price vector, increment reccurence vector at location by 1
+
+Part 3:
+
+for each item in vector
+	print item name
+	print price/reccurence
+
+------
+
+Parts subject to change, let me know if the assignment should be distributed differently
+	-Bryan
