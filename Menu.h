@@ -12,6 +12,7 @@ public:
 private:
     vector<string> names;
     vector<double> prices;
+	vector<int> recurrence;
 };
 
 #endif // MENU_H

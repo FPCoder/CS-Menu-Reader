@@ -11,5 +11,6 @@ Menu::Menu(ifstream& inFS) {
     while (inFS >> name >> price) {
         names.push_back(name);
         prices.push_back(price);
+		recurrence.push_back(1);
     }
 }

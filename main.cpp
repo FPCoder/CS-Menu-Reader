@@ -9,10 +9,12 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include "Counts.h"
 using namespace std;
 
 int main(int argc, char *argv[]) {
-	int size = argc;
+	Counts ct;
+	/*int size = argc;
 	std::string str;
 	std::vector<double> prices;
 	std::vector<string> names;
@@ -28,14 +30,17 @@ int main(int argc, char *argv[]) {
 		fileReader >> num;
 		prices.push_back(num);
 		recurrence.push_back(1);
-	}
+	}*/
 	//Checks subsequent menues with vectors and adds to items/prices/recurrence accordingly
 	//TO-DO
-
+	for (int i = 1; i < argc; ++i) {
+		ct.readFile(argv[i]);
+	}
+	ct.print();
 
 	//Divides prices by corresponding recurrence and prints accordingly
 	//TO-DO
 
 
-    return 0;
+	return 0;
 }
