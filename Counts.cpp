@@ -19,7 +19,7 @@ read the file and push data into the respective vectors.
 Ends when no more data can be read.
 */
 void Counts::readFile(string fname) {
-	ifstream inFS(fname);
+	ifstream inFS(fname.c_str());
 	string name;
 	double price;
 	int count, i;
