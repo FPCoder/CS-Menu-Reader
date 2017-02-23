@@ -33,7 +33,7 @@ void Counts::readFile(string fname) {
 			prices.insert(prices.begin() + i + 1, price);
 			recurrence.insert(recurrence.begin() + i, recurrence.at(i) + 1);*/
 			prices[i] += price;
-			recurrence[i]++;
+			recurrence[i]++; //increment the recurrence
 		}
 	}
 }
@@ -47,9 +47,9 @@ int Counts::inVec(string name) {
 
 void Counts::print() const {
 	cout << "Names\tAvg Prices\tRecurrence" << endl;
-	for (int i = 0; i < names.size(); ++i) {
-		cout << names.at(i) << "\t";
-		cout << std::fixed << std::setprecision(2) << prices.at(i) / recurrence.at(i) << "\t\t";
-		cout << recurrence.at(i) << endl;
+	for (int i = 0; i < names.size(); ++i) { 
+		cout << names.at(i) << "\t"; //print out names
+		cout << std::fixed << std::setprecision(2) << prices.at(i) / recurrence.at(i) << "\t\t"; //print the average of the price
+		cout << recurrence.at(i) << endl; //print the recurrences
 	}
 }
