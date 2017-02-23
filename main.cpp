@@ -1,10 +1,3 @@
-/* To Do: 
-	Read list files
-	Create Vector for Item names
-	Check prices on each list file and find average
-	put averages into separate vector
-	print vectors*/
-
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -13,34 +6,12 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-	Counts ct;
-	/*int size = argc;
-	std::string str;
-	std::vector<double> prices;
-	std::vector<string> names;
-	std::vector<int> recurrence;
-	//Creates a vector containing item names of 1st menu
-	string name = "";
-	double num;
-	ifstream fileReader;
-	fileReader.open(str);
-	while (!(fileReader.eof())) {
-		fileReader >> name;
-		names.push_back(name);
-		fileReader >> num;
-		prices.push_back(num);
-		recurrence.push_back(1);
-	}*/
-	//Checks subsequent menues with vectors and adds to items/prices/recurrence accordingly
-	//TO-DO
-	for (int i = 1; i < argc; ++i) {
+	Counts ct; // keeps track of data from menu files
+	for (int i = 1; i < argc; ++i) { // read each file given in argv
 		ct.readFile(argv[i]);
 	}
-	ct.print();
-	
-	//Divides prices by corresponding recurrence and prints accordingly
-	//TO-DO
 
+	ct.print(); // display results
 
 	return 0;
 }
