@@ -1,3 +1,4 @@
 burger 4.00
 lobster 15.00
 wine 7.20
+fries 4.00

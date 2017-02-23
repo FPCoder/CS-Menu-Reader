@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>
 #include "Counts.h"
 using namespace std;
 
@@ -28,9 +29,11 @@ void Counts::readFile(string fname) {
 			recurrence.push_back(1);
 		}
 		else {
-			names.insert(names.begin() + i + 1, "");
+			/*names.insert(names.begin() + i + 1, "");
 			prices.insert(prices.begin() + i + 1, price);
-			recurrence.insert(recurrence.begin() + i, recurrence.at(i) + 1);
+			recurrence.insert(recurrence.begin() + i, recurrence.at(i) + 1);*/
+			prices[i] += price;
+			recurrence[i]++;
 		}
 	}
 }
@@ -43,10 +46,10 @@ int Counts::inVec(string name) {
 }
 
 void Counts::print() const {
-	cout << "Names\tPrices\tRecurrence" << endl;
+	cout << "Names\tAvg Prices\tRecurrence" << endl;
 	for (int i = 0; i < names.size(); ++i) {
 		cout << names.at(i) << "\t";
-		cout << prices.at(i) << "\t";
+		cout << std::fixed << std::setprecision(2) << prices.at(i) / recurrence.at(i) << "\t\t";
 		cout << recurrence.at(i) << endl;
 	}
 }
